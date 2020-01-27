@@ -1,0 +1,64 @@
+ <form [formGroup]="UserFormGroup" class="container">
+   <h1 style="color:purple; font-style:italic; font-weight:90%">YAHOO!</h1>
+            <h2>Sign Up for YahooMail</h2>
+            Create a Yahoo Email address
+            <hr size="1%" color="grey">
+            <div [formGroup]="UserFormGroup" class="formGroup">
+                <br>
+                <input formControlName="fullName" class="form-control" type="text" id="userName" placeholder="First Name" style="border-right: none; border-top: none;border-left:none ;" autofocus required >
+        
+                <input formControlName="surName" class="form-control" type="text" id="Surname" placeholder="Surname" style="border-right: none; border-top: none;border-left:none ;" required>
+            </div>
+            <br>
+            <div [formGroup]="UserFormGroup" class="formGroup">
+                <input formControlName="email" class="form-control" type="email" id="email" placeholder="Email" size="45%" style="border-right: none; border-top: none;border-left:none ;" required>
+            </div>
+            <br>
+            <div [formGroup]="UserFormGroup" class="formGroup">
+
+                <input formControlName="password" class="form-control" type="password" id="pwd" placeholder="Password" style="border-right: none; border-top: none;border-left:none ;" size="45%" required>
+            </div>
+            <br>
+            <div  [formGroup]="UserFormGroup" class="formGroup">
+
+                <select  style="border-right: none; border-top: none;border-left:none ; width: 20%;" >
+                    <option>+91</option>
+                    <option>+44</option>
+                    <option>+93</option>
+                </select>
+                <input formControlName="mobile" class="form-control" type="number" id="mob" placeholder="Mobile Number" style="border-right: none; border-top: none;border-left:none ;width: 73%;" required>
+
+            </div>
+            <br>
+            <div  [formGroup]="UserFormGroup" class="formGroup">
+                <select formControlName="day" class="form-control" id="day" style="border-right: none; border-top: none;border-left:none ; width: 25%;">
+                    <option selected>Birth-Day</option>
+                </select>
+                <select formControlName="month" class="form-control" style="border-right: none; border-top: none;border-left:none ; width: 25%; align-content: right;">
+                    <option selected>Month</option>
+                    <option>Jan</option>
+                    <option>Feb</option>
+                    <option>Mar</option>
+                    <option>Apr</option>
+                    <option>May</option>
+                    <option>Jun</option>
+                    <option>Jul</option>
+                    <option>Aug</option>
+                    <option>Sep</option>
+                    <option>Oct</option>
+                    <option>Nov</option>
+                    <option>Dec</option>
+                </select>
+                <select formControlName="year" class="form-control" id="bday" style="border-right: none; border-top: none;border-left:none ; width: 25%;">
+                    <option selected>Year</option>
+                </select>
+            </div>
+            <br>
+            <div [formGroup]="UserFormGroup"  class="formGroup">
+                <input formControlName="gender" class="form-control" type="text" id="gen" placeholder="Gender(Optional)"  style="border-right: none; border-top: none;border-left:none ; width: 94%;" >
+            </div>
+            <br>
+            <div [formGroup]="UserFormGroup"  class="formGroup"> 
+                <button style="border-radius: 15px; background-color: lightblue;" click="submit()">Continue</button>
+            </div>
+        </form>
