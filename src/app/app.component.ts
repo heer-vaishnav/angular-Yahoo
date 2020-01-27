@@ -28,8 +28,33 @@ export class AppComponent implements OnInit{
      
      }),
       hobbies:this.formBuilder.array([])
-      //this.userFormGroup.controls.fullName.SetValue("Heer"),
-    });
+    }),
+   this.userFormGroup.setValue({
+    fullName: 'Wilson',
+   surname: 'Xyz',
+   email: 'wilsondcousta@gmail.com',
+   password:'Abc',
+   mobile:'12345',
+   gender:'M',
+   address:'gg hfvhfkdfj vudkifb',
+   hobbies:'Dancing',
+   streetNo:'2',
+   houseNo:'5',
+   postalCode:'344'
+  });
+    this.userFormGroup.patchValue({
+    fullName: 'Wil',
+   surname: 'Abc',
+   email: 'wilsond@gmail.com',
+   password:'Xyz',
+   mobile:'1234567',
+   gender:'F',
+   address:'gg hfvhfkdfj ',
+   hobbies:'Music',
+   streetNo:'4',
+   houseNo:'9',
+   postalCode:'440'
+  });
   }
     addHobby()
     {
