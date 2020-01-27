@@ -20,10 +20,7 @@ export class AppComponent implements OnInit{
       email:['',Validators.required],
       password:['',Validators.required],
       mobile:['',Validators.required],
-      day:['',Validators.required],
-      month:['',Validators.required],
-      year:['',Validators.required],
-      gender:['',Validators.required]
+      gender:''
      
     });
   }
