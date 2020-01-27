@@ -27,13 +27,13 @@ export class AppComponent implements OnInit{
       postalCode:''
      
      }),
-      hobbies:this.formBuilder.array([]),
+      hobbies:this.formBuilder.array([])
       //this.userFormGroup.controls.fullName.SetValue("Heer"),
     });
   }
     addHobby()
     {
-      const hobby=this.userFormGroup.controls.hobby as FormArray;
+      const hobby=this.userFormGroup.controls.hobbies as FormArray;
       hobby.push(this.formBuilder.group({
         hobbyName:''
       }));
