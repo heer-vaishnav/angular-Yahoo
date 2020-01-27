@@ -34,6 +34,24 @@
                 <input formControlName="gender" class="form-control" type="text" id="gen" placeholder="Gender(Optional)"  style="border-right: none; border-top: none;border-left:none ; width: 94%;" >
             </div>
             <br>
+            <div class="formGroup">
+              
+              <div [formGroup]="userFormGroup.controls.address">
+                <input type="text"  class="form-control" placeholder="Address" style="border-right: none; border-top: none;border-left:none ; width: 94%;">
+                <input type="text" formControlName="streetNo" class="form-control" placeholder="Street No" style="border-right: none; border-top: none;border-left:none ; width: 94%;">
+                <input type="text" formControlName="houseNo" class="form-control" placeholder="House No" style="border-right: none; border-top: none;border-left:none ; width: 94%;">
+                <input type="text" formControlName="postalCode" class="form-control" placeholder="Postal Code" style="border-right: none; border-top: none;border-left:none ; width: 94%;">
+              </div>
+            </div>
+            <br>
+            	<button (click)="addHobby()">Add</button>
+
+		<div formArrayName="hobby" *ngFor="let hobby of userFormGroup.controls.hobby?.value; let i = index">
+			<div [formGroupName]="i">
+
+				<input placeholder="hobbyName" formControlName="hobbyName">
+          </div>
+			</div>
             <div  class="formGroup"> 
                 <button [disabled]="userFormGroup.invalid" type="button" style="border-radius: 15px; background-color: lightblue;" (click)="submit()">Continue</button>
             </div>

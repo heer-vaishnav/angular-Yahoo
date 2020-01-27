@@ -5,4 +5,5 @@ export class user{
   password:string;
   mobile:number;
   gender:string;
+  address:string;
 }
