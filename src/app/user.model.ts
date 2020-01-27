@@ -4,8 +4,5 @@ export class user{
   email:string;
   password:string;
   mobile:number;
-  day:number;
-  month:number;
-  year:number;
   gender:string;
 }
