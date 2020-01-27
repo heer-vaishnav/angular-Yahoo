@@ -1,4 +1,4 @@
-import { Component,OnInit } from "@angular/core";
+import { Component, OnInit } from "@angular/core";
 import { user }from './user.model';
 import { FormGroup,FormBuilder,Validators} from '@angular/forms';
 @Component({
@@ -6,7 +6,7 @@ import { FormGroup,FormBuilder,Validators} from '@angular/forms';
   templateUrl: "./app.component.html",
   styleUrls: ["./app.component.css"]
 })
-export class AppComponent implements onInit{
+export class AppComponent implements OnInit{
   user:user=new user();
   userFormGroup:FormGroup;
 
@@ -16,15 +16,15 @@ export class AppComponent implements onInit{
   {
     this.userFormGroup=this.formBuilder.group({
       fullName:['',Validators.required],
-      surname:[''],
-      email:[''],
-      password:[''],
-      mobile:[''],
-      day:[''],
-      month:[''],
-      year:[''],
-      gender:[''],
-
+      surname:['',Validators.required],
+      email:['',Validators.required],
+      password:['',Validators.required],
+      mobile:['',Validators.required],
+      day:['',Validators.required],
+      month:['',Validators.required],
+      year:['',Validators.required],
+      gender:['',Validators.required]
+     
     });
   }
   submit()

@@ -1,25 +1,25 @@
- <form [formGroup]="UserFormGroup" class="container">
+ <form [formGroup]="userFormGroup" class="container">
    <h1 style="color:purple; font-style:italic; font-weight:90%">YAHOO!</h1>
             <h2>Sign Up for YahooMail</h2>
             Create a Yahoo Email address
             <hr size="1%" color="grey">
-            <div [formGroup]="UserFormGroup" class="formGroup">
+            <div  class="formGroup">
                 <br>
                 <input formControlName="fullName" class="form-control" type="text" id="userName" placeholder="First Name" style="border-right: none; border-top: none;border-left:none ;" autofocus required >
         
-                <input formControlName="surName" class="form-control" type="text" id="Surname" placeholder="Surname" style="border-right: none; border-top: none;border-left:none ;" required>
+                <input formControlName="surname" class="form-control" type="text" id="Surname" placeholder="Surname" style="border-right: none; border-top: none;border-left:none ;" required>
             </div>
             <br>
-            <div [formGroup]="UserFormGroup" class="formGroup">
+            <div class="formGroup">
                 <input formControlName="email" class="form-control" type="email" id="email" placeholder="Email" size="45%" style="border-right: none; border-top: none;border-left:none ;" required>
             </div>
             <br>
-            <div [formGroup]="UserFormGroup" class="formGroup">
+            <div  class="formGroup">
 
                 <input formControlName="password" class="form-control" type="password" id="pwd" placeholder="Password" style="border-right: none; border-top: none;border-left:none ;" size="45%" required>
             </div>
             <br>
-            <div  [formGroup]="UserFormGroup" class="formGroup">
+            <div class="formGroup">
 
                 <select  style="border-right: none; border-top: none;border-left:none ; width: 20%;" >
                     <option>+91</option>
@@ -30,7 +30,7 @@
 
             </div>
             <br>
-            <div  [formGroup]="UserFormGroup" class="formGroup">
+            <div   class="formGroup">
                 <select formControlName="day" class="form-control" id="day" style="border-right: none; border-top: none;border-left:none ; width: 25%;">
                     <option selected>Birth-Day</option>
                 </select>
@@ -54,11 +54,11 @@
                 </select>
             </div>
             <br>
-            <div [formGroup]="UserFormGroup"  class="formGroup">
+            <div  class="formGroup">
                 <input formControlName="gender" class="form-control" type="text" id="gen" placeholder="Gender(Optional)"  style="border-right: none; border-top: none;border-left:none ; width: 94%;" >
             </div>
             <br>
-            <div [formGroup]="UserFormGroup"  class="formGroup"> 
+            <div  class="formGroup"> 
                 <button style="border-radius: 15px; background-color: lightblue;" click="submit()">Continue</button>
             </div>
         </form>
