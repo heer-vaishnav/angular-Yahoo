@@ -42,19 +42,14 @@ export class AppComponent implements OnInit{
    houseNo:'5',
    postalCode:'344'
   });
-    this.userFormGroup.patchValue({
-    fullName: 'Wil',
-   surname: 'Abc',
-   email: 'wilsond@gmail.com',
-   password:'Xyz',
-   mobile:'1234567',
-   gender:'F',
-   address:'gg hfvhfkdfj ',
-   hobbies:'Music',
-   streetNo:'4',
-   houseNo:'9',
-   postalCode:'440'
-  });
+  }
+  patchValue()
+  {
+    this.userFormGroup.controls.fullName.patchValue("Max");
+  }
+  reset()
+  {
+    this.userFormGroup.reset();
   }
     addHobby()
     {
