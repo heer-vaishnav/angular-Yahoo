@@ -13,6 +13,7 @@
             <div class="formGroup">
                 <input formControlName="email" class="form-control" type="email" id="email" placeholder="Email" size="45%" style="border-right: none; border-top: none;border-left:none ;" required>
             </div>
+            <div style="color:red" class="formGroup" *ngIf="userFormGroup.controls.email.invalid && userFormGroup.controls.email.touched">*Email is Required</div>
             <br>
             <div  class="formGroup">
 
